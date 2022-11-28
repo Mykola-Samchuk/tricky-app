@@ -1,0 +1,13 @@
+.search-wrapp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.search-wrapp input{
+    max-width: 600px;
+    padding: 8px;
+    font-size: 18px;
+}
