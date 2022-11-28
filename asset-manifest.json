@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/tricky-app/static/css/main.2f284ecc.css",
+    "main.js": "/tricky-app/static/js/main.c896be1f.js",
+    "static/js/787.c7dc3938.chunk.js": "/tricky-app/static/js/787.c7dc3938.chunk.js",
+    "static/media/logo.png": "/tricky-app/static/media/logo.20adfb35ae6a6e5817bf.png",
+    "index.html": "/tricky-app/index.html",
+    "main.2f284ecc.css.map": "/tricky-app/static/css/main.2f284ecc.css.map",
+    "main.c896be1f.js.map": "/tricky-app/static/js/main.c896be1f.js.map",
+    "787.c7dc3938.chunk.js.map": "/tricky-app/static/js/787.c7dc3938.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2f284ecc.css",
+    "static/js/main.c896be1f.js"
+  ]
+}
