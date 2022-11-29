@@ -13,6 +13,7 @@ export default function TrickyPage() {
   });
 
   const handlerBlur = (search) => {
+    setStatus({ isLoaded: true });
     fetch(`https://react-course-api.azurewebsites.net/lesson/${search}`)
       .then((response) => {
         if (response.ok) {
@@ -21,11 +22,10 @@ export default function TrickyPage() {
         throw new Error("Network faild", { cause: response.status });
       })
       .then((result) => {
-        setStatus({ isLoaded: true, data: result });
-        console.log(result);
+        setStatus({ isLoaded: false, data: result });
       })
       .catch((error) => {
-        setStatus({ isLoaded: true, error: error });
+        setStatus({ isLoaded: false, error: error });
       });
   };
 
@@ -45,15 +45,12 @@ export default function TrickyPage() {
         search={SEARCH_KEYWORD}
       />
 
-      {status.data ? (
+      {status.isLoaded ? (
+        <div>Loading...</div>
+      ) : status.data ? (
         <Lesson items={status.data} />
-      ) : !status.isLoaded ? (
-        <div>Loading {console.log(status.isLoaded)}</div>
       ) : (
-        <ErrorMessage
-          errorMessage={status.error.message}
-          errorCause={status.error.cause}
-        />
+        <ErrorMessage errorMessage={status.error.message} errorCause={status.error.cause} />
       )}
     </>
   );

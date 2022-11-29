@@ -5,7 +5,9 @@ export default function ErrorMessage({ errorMessage, errorCause }) {
 
   useEffect(() => {
     if (errorCause === 500) {
-      setMessage("Sorry, Something went wrong - but our specialists are working on solving the problem");
+      setMessage(
+        "Sorry, Something went wrong - but our specialists are working on solving the problem"
+      );
     } else if (errorCause === 404) {
       setMessage("Bad request, Not Found");
     } else if (errorMessage === "Failed to fetch") {

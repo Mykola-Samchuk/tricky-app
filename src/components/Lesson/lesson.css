@@ -1,6 +1,5 @@
-.lessons-wrapp{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-   
+.lessons-wrapp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
